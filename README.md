@@ -1,6 +1,6 @@
-# qqwry.ipdb (纯真 IP 库 ipdb 格式)
+# 备用
 
-由纯真社区版 CZDB 自动转换，每日检查更新。无需 key 即可查询。
+ipdb。
 
 ## 文件
 
