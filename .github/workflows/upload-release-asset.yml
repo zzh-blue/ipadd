@@ -1,4 +1,4 @@
-# v2 re-register
+# v3 re-register
 name: Upload qqwry.ipdb to release
 on:
   release:
