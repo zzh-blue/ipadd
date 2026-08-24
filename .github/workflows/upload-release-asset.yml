@@ -30,6 +30,6 @@ jobs:
           ls -la qqwry.ipdb
       - name: Upload asset
         env:
-          GH_TOKEN: *** secrets.GITHUB_TOKEN }}
+          GH_TOKEN: *** github_token }}
         run: |
           gh release upload "${{ steps.tag.outputs.tag }}" qqwry.ipdb --clobber
