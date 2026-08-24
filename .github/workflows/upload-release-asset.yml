@@ -17,9 +17,11 @@ jobs:
       - name: Download qqwry.ipdb from main
         run: |
           curl -sL --retry 3 -o qqwry.ipdb "https://raw.githubusercontent.com/${{ github.repository }}/main/qqwry.ipdb"
-          ls -la qqwry.ipdb
+          curl -sL --retry 3 -o qqwry.dat "https://raw.githubusercontent.com/${{ github.repository }}/main/qqwry.dat"
+          ls -la qqwry.ipdb qqwry.dat
       - name: Upload asset
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release upload "${{ inputs.tag }}" qqwry.ipdb --clobber --repo "${{ github.repository }}"
+          gh release upload "${{ inputs.tag }}" qqwry.dat --clobber --repo "${{ github.repository }}"
